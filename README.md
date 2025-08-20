@@ -111,9 +111,8 @@ No advanced error handling (keep inputs simple)
 
 No complex validation (assumes good user behavior)
 
-Perfect for learning Python basics
 
-🔧 Future Improvements
+🔧 Future Implementations
 
 Better error handling with try/except
 
