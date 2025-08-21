@@ -1,0 +1,163 @@
+<mxfile host="65bd71144e">
+    <diagram name="TaxWise CLI - Program Logic Flow" id="taxwise-real-flow">
+        <mxGraphModel dx="1402" dy="934" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="💼 TAXWISE CLI&#xa;Command-line tax assistant for Spain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="20" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="structure" value="📁 PROJECT STRUCTURE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="20" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="files" value="main.py&#xa;Entry point &amp; menu interface&#xa;&#xa;calculators.py&#xa;Tax calculation functions&#xa;&#xa;bot.py&#xa;FAQ assistant logic" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="80" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="features" value="✨ CORE FEATURES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="20" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="tax-calcs" value="📊 TAX CALCULATORS&#xa;• VAT (21% fixed rate)&#xa;• IRPF (user-defined rate)&#xa;• Net income for freelancers&#xa;• Net income for employees&#xa;&#xa;🤖 FAQ ASSISTANT&#xa;• Keyword search&#xa;• Alias support&#xa;• Topic suggestions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="80" width="180" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="tech" value="🔧 TECH STACK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="30" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="tech-details" value="Python 3.x&#xa;Pure CLI&#xa;No external dependencies&#xa;Modular structure" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="120" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="start" value="START&#xa;python main.py" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="welcome" value="~~~~~~~~~~~~~~&#xa;  TAXWISE CLI&#xa;~~~~~~~~~~~~~~" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="210" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="menu" value="========== OPTION MENU ==========&#xa;Choose an option:&#xa;1. Calculate VAT (IVA) only&#xa;2. Calculate IRPF only&#xa;3. Calculate Net Income (Freelancer)&#xa;4. Calculate Net Income (Employee)&#xa;5. Tax FAQ Assistant&#xa;6. Exit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="300" width="300" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="choice" value="Option (1-6)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="450" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="opt1" value="Option 1&#xa;Calculate VAT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="510" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="vat-flow" value="Input: Base amount&#xa;Calculate: amount * 0.21&#xa;Output: Base + VAT + Total" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="600" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="opt2" value="Option 2&#xa;Calculate IRPF" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="530" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="irpf-flow" value="Input: Gross income &amp; rate&#xa;Calculate: income * (rate/100)&#xa;Output: Gross - IRPF = Net" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="645" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="opt3" value="Option 3&#xa;Net Income&#xa;(Freelancer)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="540" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="freelancer-flow" value="Input: Gross income &amp; IRPF&#xa;Calculate:&#xa;- IRPF retention&#xa;- Fixed SS quota&#xa;Output: Final net income" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="645" width="100" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="opt4" value="Option 4&#xa;Net Income&#xa;(Employee)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="535" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="employee-flow" value="Input: Gross salary &amp; IRPF&#xa;Calculate:&#xa;- IRPF retention&#xa;- Standard payroll deductions&#xa;Output: Net salary" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="640" width="100" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="opt5" value="Option 5&#xa;Tax FAQ&#xa;Assistant" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="535" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq-start" value="--- TAX FAQ ASSISTANT ---&#xa;Available topics:&#xa;IVA, IRPF, Freelancer,&#xa;Employee, Invoice, Deductions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="640" width="100" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq-input" value="User inputs&#xa;keyword/topic" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="780" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq-logic" value="Search logic:&#xa;1. Direct match?&#xa;2. Check aliases&#xa;3. Offer suggestions" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="850" width="150" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq-found" value="Found:&#xa;Return explanation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="890" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq-suggest" value="Not found:&#xa;&#39;Did you mean...&#39;&#xa;Show suggestions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="1010" y="880" width="100" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="opt6" value="Option 6&#xa;Exit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="500" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="end" value="END&#xa;Program closes" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="635" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="return-menu" value="Press Enter to&#xa;return to menu..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="790" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="start" target="welcome" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="welcome" target="menu" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="menu" target="choice" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow4" value="1" style="endArrow=classic;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="choice" target="opt1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow5" value="2" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="choice" target="opt2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow6" value="3" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="choice" target="opt3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow7" value="4" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="choice" target="opt4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow8" value="5" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="choice" target="opt5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow9" value="6" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="choice" target="opt6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow10" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="opt1" target="vat-flow" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="opt2" target="irpf-flow" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow12" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="opt3" target="freelancer-flow" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow13" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="opt4" target="employee-flow" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="opt5" target="faq-start" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow15" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="faq-start" target="faq-input" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow16" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="faq-input" target="faq-logic" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow17" value="Found" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="faq-logic" target="faq-found" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow18" value="Not found" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="faq-logic" target="faq-suggest" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow19" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="opt6" target="end" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow20" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="freelancer-flow" target="return-menu" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow21" value="Back to Menu" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;" parent="1" source="return-menu" target="menu" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="300" y="805"/>
+                            <mxPoint x="-20" y="600"/>
+                            <mxPoint x="300" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

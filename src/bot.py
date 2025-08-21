@@ -4,6 +4,7 @@
 
 class TaxBot:
 
+    # Initializes the bot with a set of FAQs and aliases for common tax terms.
     def __init__(self):
         self.faqs = {
             "iva": "IVA is a 21% tax on goods and services. Basic necessities may have reduced rates of 10% or 4%.",
@@ -53,16 +54,18 @@ class TaxBot:
             "neto": "Overview: Net vs. gross income (IRPF + payroll deductions)"
         }
 
-
+    # Returns a list of available topics for the FAQ
     def get_topics(self):
         return list(self.faqs.keys())
 
+    # Displays the available topics in a formatted way
     def show_topics(self):
         topics = self.get_topics()
         print("\nAvailable topics:\n")
         print(" | ".join(topics))
         print("\nExample: 'What is IRPF?' or 'Explain freelancer'\n")
 
+    # Logic to handle user input and return the appropriate FAQ response
     def get_faq(self, topic):
         topic = topic.lower().strip()
 
@@ -90,6 +93,7 @@ class TaxBot:
         # If no matches found, suggest similar topics
         print(self.suggest(topic))
 
+    # Suggests similar topics if the input does not match any FAQ
     def suggest(self, invalid_topic):
         topic = invalid_topic.lower()
         suggestions = []

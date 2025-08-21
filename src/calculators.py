@@ -14,12 +14,7 @@ class TaxCalculator:
         irpf_amount = gross_income * (irpf_rate / 100)
         return irpf_amount 
     
-    #  Calculates standard employee deductions based on gross income.
-    # Includes:
-    #   - Social Security (SS): 4.7%
-    #   - Unemployment insurance: 1.55%
-    #   - Job training: 0.1%
-    #   - Intergenerational Equity Mechanism (MEI): 0.7%   
+    #  Calculates standard employee deductions based on gross income.   
     def calculate_additional_deductions(self, gross_income):
 
         social_security = gross_income * 0.047

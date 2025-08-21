@@ -10,12 +10,14 @@ class TaxWiseCLI:
         self.calculator = TC()
         self.bot = TB()
 
+    # Displays a welcome message to the user
     def show_welcome(self):
         print("=" * 40)
         print("Welcome to TaxWise CLI!")
         print("Your personal tax assistant.")
         print("=" * 40)
     
+    # Displays the main menu options to the user
     def show_menu(self):
         print("========== OPTION MENU ==========")
         print("Choose an option:")
@@ -31,6 +33,7 @@ class TaxWiseCLI:
         text = text.replace(".", "", 1)
         return text.isdigit()
     
+    # Logic to calculate VAT (IVA) based on user input
     def option_calculate_iva(self):
         print("\n🔹 VAT Calculator (IVA - 21%)")
         amount = input("Base amount: ")
@@ -44,6 +47,7 @@ class TaxWiseCLI:
             print("Invalid input. Please enter a valid number.")
         input("Press Enter to continue...")
 
+    # Logic to calculate IRPF based on user input
     def option_calculate_irpf(self):
         print("\n🔹 IRPF Calculator")
         income = input("Gross income: ")
@@ -58,6 +62,7 @@ class TaxWiseCLI:
             print("Invalid input. Please enter valid numbers.")
         input("Press Enter to continue...")
 
+    # Logic to calculate net income for freelancers based on user input
     def option_calculate_net_income_freelancer(self):
         print("\n🔹 Net Income Calculator (Freelancer)")
         income = input("Gross income: ")
@@ -72,6 +77,7 @@ class TaxWiseCLI:
             print("Invalid input. Please enter valid numbers.")
         input("Press Enter to continue...")
 
+    # Logic to calculate net income for employees based on user input
     def option_calculate_net_income_employee(self):
         print("\n🔹 Net Income Calculator (Employee)")
         income = input("Gross income: ")
@@ -96,7 +102,8 @@ class TaxWiseCLI:
             print("Invalid input. Please enter valid numbers.")
         input("Press Enter to continue...")       
 
-
+    # Logic to handle the FAQ assistant
+    # Displays available topics and handles user queries
     def option_use_faq_assistant(self):
         print("\n--- FAQ Assistant ---")
         print("Type a topic or keyword to get information.")
@@ -112,7 +119,8 @@ class TaxWiseCLI:
             self.bot.get_faq(topic)
             print("\n")
         
-
+    # Main loop to run the TaxWise CLI application
+    # Handles user input and calls the appropriate methods based on the option selected
     def run_taxwise(self):
        self.show_welcome()
 
@@ -145,6 +153,6 @@ class TaxWiseCLI:
             print()              
 
         
-
+# Create an instance of the TaxWiseCLI and run the application
 app = TaxWiseCLI()
 app.run_taxwise()    

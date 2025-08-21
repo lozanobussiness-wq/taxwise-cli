@@ -1,126 +1,151 @@
-# TaxWise CLI
+# 💼 TaxWise CLI
 
-**TaxWise CLI** is a simple command-line assistant for basic tax-related calculations and information.
+**TaxWise CLI** is a command-line assistant for self-employed individuals and employees in Spain. It helps you calculate VAT, IRPF, and Net Income, and includes a simple FAQ bot for common tax-related questions.
 
-## Features (Planned)
-- Basic tax calculations
-- User-friendly CLI interaction
-- Modular code structure with classes
+> ⚠️ This is a personal learning project built in Python. It simulates real tax logic and language but should not be used for legal or financial advice.
 
-## Project Status
-Initial setup complete. Development starts soon.
+---
 
-TaxWise CLI - Simple Spanish Tax Helper
-A beginner-friendly command-line tax calculator for Spanish taxes (IVA, IRPF).
+## ✨ Features
 
-🎯 What does it do?
-Calculate IVA (21%) on any amount
+### 📊 Tax Calculators
 
-Calculate IRPF with custom rate
+- Calculate VAT (21% fixed rate).
+- Calculate IRPF (user-defined rate).
+- Net income for freelancers (with IRPF and fixed SS quota).
+- Net income for employees (IRPF + standard payroll deductions).
 
-Calculate complete net income after all taxes
+### 🤖 Tax FAQ Assistant
 
-Browse FAQ topics about Spanish taxes
+- Enter a keyword like `iva`, `employee`, or `freelancer`.
+- The assistant returns a brief explanation.
+- If no exact match is found, it offers suggestions.
+- Supports aliases (e.g. `value added tax` → `iva`, `salary` → `employee`).
 
-Search FAQ by keywords
+---
 
-📂 Project Files
-text
-taxwise-cli/
-├── main.py              # Main program with menu
-├── calculator.py        # Tax calculation logic
-├── bot.py              # FAQ system
-└── README.md           # This file
-🚀 How to Run
-Save all 3 Python files in same folder
+## 🧪 Example Flow
 
-Open terminal/command prompt
 
-Navigate to project folder
+~~~~~~~~~~~~~~
+  TAXWISE CLI
+~~~~~~~~~~~~~~
 
-Run: python main.py
-
-💡 Example Usage
-text
-========================================
-   Welcome to TaxWise CLI
-   Simple Spanish Tax Helper
-========================================
-
+========== OPTION MENU ==========
 Choose an option:
-1. Calculate IVA only
-2. Calculate IRPF only  
-3. Calculate Net Income
-4. Browse FAQ topics
-5. Search FAQ by keyword
+1. Calculate VAT (IVA) only
+2. Calculate IRPF only
+3. Calculate Net Income (Freelancer)
+4. Calculate Net Income (Employee)
+5. Tax FAQ Assistant
 6. Exit
-------------------------------
-Enter choice (1-6): 3
 
---- Net Income Calculator ---
-This calculates your final income after all taxes
-Enter gross income (€): 1000
-Enter IRPF rate (%): 15
+Option (1–6): 2
 
---- INCOME BREAKDOWN ---
-Gross Income: 1000.0 €
-IRPF (15%): 150.0 €
-IVA (21%): 210.0 €
-NET INCOME: 640.0 €
-📖 FAQ Topics
-iva: Information about IVA tax rates
+Enter your gross income: 2000  
+Enter your IRPF rate (%): 15
 
-irpf: Personal income tax information
+Your gross income is: 2000.0 €  
+Your IRPF retention is: 300.0 €  
+---------------------------------
+Net income after IRPF: 1700.0 €
 
-autonomo: Self-employed requirements
+Press Enter to return to the menu...
 
-deadlines: Important tax dates
+Option (1–6): 5
 
-deductions: Business expense deductions
+--- TAX FAQ ASSISTANT ---
+Available topics:
+- IVA
+- IRPF
+- Freelancer
+- Employee
+- Invoice
+- Deductions
 
-rates: Current tax rates summary
+Type a topic or keyword to get information, or 'exit' to return to the main menu.
 
-🧮 Tax Calculations
-IVA: Fixed 21% rate
+> What is salary?
 
-IRPF: User enters percentage (typically 7%, 15%, or 19% for self-employed)
+Topic not found. Did you mean:  
+ - employee  
+ - freelancer  
 
-Net Income: Gross income minus both IVA and IRPF
+Tip: Type 'help' to view all available topics again.
+```
 
-🎓 Learning Features
-This project demonstrates:
+---
 
-✅ Classes: TaxCalculator, TaxBot, TaxWiseCLI
+## 🔧 Tech Stack
 
-✅ Functions: Simple calculations and menu options
+- **Python 3.x**
+- Pure CLI (no external dependencies)
+- Modular structure:
+  - `main.py`: main loop and user interface
+  - `calculators.py`: tax logic
+  - `bot.py`: FAQ assistant
 
-✅ Dictionaries: FAQ storage
+---
 
-✅ User Input: Getting data with input()
+## 🚧 Future Improvements
 
-✅ Basic Validation: Checking if input is number
+This project is part of a learning roadmap. Planned improvements include:
 
-✅ Loops: Main program loop with while
+### ✅ Short-term
+- Input validation and error handling  
+- Improve formatting and decimal precision  
+- Save/load data from `.txt` or `.json`  
+- Persistent user preferences
 
-✅ String Formatting: Simple formatting with f-strings
+### 🌐 Mid-term
+- Export to CSV or PDF  
+- Use JSON for FAQ and aliases  
+- Logging user interactions  
+- CLI arguments support
 
-⚠️ Important Notes
-This is a beginner-level project
+### 🚀 Long-term
+- Web version (Flask or FastAPI)  
+- AI-based assistant via API (OpenAI or local LLM)  
+- Real tax API integration  
+- Multilingual support (ES/EN)
 
-No advanced error handling (keep inputs simple)
+> *Future implementations are ideas for learning and improvement.*
+> *This project is for educational purposes only.*
 
-No complex validation (assumes good user behavior)
+---
 
+## 📁 Project Structure
 
-🔧 Future Implementations
+```bash
+TaxWise/
+│
+├── main.py             # Entry point and menu interface
+├── calculators.py      # Functions for VAT, IRPF, and net income calculations
+├── bot.py              # Tax FAQ assistant logic and data
+└── README.md           # Project documentation
+```
 
-Better error handling with try/except
+---
 
-Input validation for all cases
+## 🧠 Learning Goals
 
-Save results to files
+This project helped me practice and understand:
 
-More tax calculation options
+- How to structure CLI projects using Python modules.
+- Basic input handling, loops, and menus.
+- Using dictionaries, lists, and mappings for logic.
+- Writing clean output and improving CLI UX.
+- Designing small assistants using keywords and alias mapping.
 
-Web interface
+---
 
+## 👨‍💻 Author
+
+Created by Miguel Lozano as a final project for the Codedex Python Beginner Course.
+
+## 📜 License
+
+This project is licensed under the MIT License.  
+You are free to use, copy, modify, and distribute this project with attribution.  
+
+Copyright © 2025 [Miguel Lozano]
